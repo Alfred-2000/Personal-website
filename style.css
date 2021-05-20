@@ -13,7 +13,7 @@ body
 nav
 {
     background-color: blue;
-    height: 8vh;
+    height: 9vh;
     width: 100%;
     position: fixed;
 
@@ -163,7 +163,7 @@ nav ul li a:hover
 }
 #about-me
 {
-    height: 100vh;
+    height: 100%;
     background: url(images/space.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -171,7 +171,7 @@ nav ul li a:hover
 .overlay-about-me
 {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.76);
 }
 .content-about-me
 {
@@ -206,7 +206,7 @@ nav ul li a:hover
     #about-me
     {
         height: 100vh;
-        background: url(images/cycling.jpg)no-repeat center;
+        background: url(images/intro5.jpg)no-repeat right;
         background-size: cover;
     }
     .content-about-me
@@ -237,23 +237,108 @@ nav ul li a:hover
 }
 
 
+.intro {
+    background: url(images/intro1.jpg) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    background: rgb(97, 105, 109);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+.intro-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro-text { 
+    color: rgb(233, 233, 233);
+    font-family: "Heebo", sans-serif;
+    font-size: 1.5rem;
+    /* display: flex; */
+    text-align: center;
+}
+
+.hide {
+    
+    /* background: black; */
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+@media(min-width: 698px){
+    .intro {
+        background: url(images/intro.jpg) no-repeat center;
+        background-size: cover;
+    }   
+    .intro-text {
+        font-size: 2rem;
+    }
+}
+@media(min-width: 798px){
+    .intro-text {
+        font-size: 3rem;
+    }
+}
+
 /*---------------------------------------Industrial Exposure-------------------------------------*/
-        
-#industrial-exposure h2
+
+#industrial-exposure{
+    /* background: skyblue; */
+    margin-top: 3rem;
+}
+
+/* #industrial-exposure h2
 {
-    /* background-color: rgb(164, 102, 223); */
+    background-color: rgb(164, 102, 223);
     padding: 0.4em;
     font-size: 1.6em;
+} */
+.industry-logo{
+    background: url(images/industry-logo.jpg) no-repeat center;
+    background-size: cover;
+    height: 25vh;
+    width: 100%;
+}
+.industry-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.industry-overlay h2{
+    font-size: 2.5rem;
+    color: white;
 }
 .internship
 {
     width: min(85%, 989px);
     margin: 0 auto;
     text-align: center;
+    margin-top: 1.5rem;
 }
 .internship h3
 {
-    margin-top: 1.5em;
+    /* margin-top: 1.5em; */
     font-size: 1.3em;
 }
 .internship h4
@@ -283,7 +368,12 @@ nav ul li a:hover
 }
 @media(min-width: 769px)
 {
-
+    .industry-logo{
+        height: 45vh;
+    }
+    .industry-overlay h2{
+        font-size: 3.5rem;
+    }
     .internship-content img
     {
         height: 300px;
@@ -299,6 +389,14 @@ nav ul li a:hover
     {
         font-size: 1.1em;
         width: 60%;
+    }
+}
+@media(min-width: 889px){
+    .industry-logo{
+        height: 60vh;
+    }
+    .industry-overlay h2{
+        font-size: 4.5rem;
     }
 }
 
@@ -333,83 +431,128 @@ nav ul li a:hover
 /************************************Professional Skills**********************************************/
 
 #skills{
+    margin-top: 3rem;
     /* background: skyblue; */
-    /* height: 100vh; */
+    height: 100%;
+}
+.skills-logo{
+    background: url(images/skills-logo.jpg) no-repeat center;
+    background-size: cover;
+    height: 25vh;
+    width: 100%;
+}
+.skills-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skills-overlay h2{
+    font-size: 2.5rem;
+    color: white;
+}
+/* #skills h2
+{
+    text-align: center;
+    padding-top: 3rem;
+} */
+.skills-img
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: min(90%, 50em);
+    margin: 0 auto;
+    padding-bottom: 2rem;
 }
 .skills-img .figSkills img
-        {
-            max-width: 100%;
-            height: auto;
-            display: block;
-
-        }
-        #skills h2
-        {
-            text-align: center;
-            padding-top: 65px;
-            margin: 0;
-        }
-        .skills
-        {
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-        .skills-img
-        {
-            align-items: center;
-            height: 100vh;
-            width: min(90%, 50em);
-            margin: 0 auto;
-        }
-        .figSkills
-        {
-            float: left;
-            justify-content: space-around;
-            max-width: 50%;
-            margin: 0;
-            padding: 1.5em;
-            box-sizing: border-box;
-        }
-        .figSkills .figSkillsCapt
-        {
-            padding-top: 0.5em;
-            text-align: center;
-            font-size: 1.25em;
-        }
-        @media(min-width: 36em)
-        {
-            html
-            {
-                font-size: 18px;
-            }
-            .figSkills
-            {
-                max-width: 20%;
-                padding: 3.5em 1.5em;
-            }
-        }
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.figSkills
+{
+    float: left;
+    justify-content: space-around;
+    max-width: 50%;
+    margin: 0;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+.figSkills .figSkillsCapt
+{
+    padding-top: 0.5em;
+    text-align: center;
+    font-size: 1.25em;
+}
+@media(min-width: 769px){
+    .skills-logo{
+        height: 45vh;
+    }
+    .skills-overlay h2{
+        font-size: 3.5rem;
+    }
+}
+@media(min-width: 889px){
+    .skills-logo{
+        height: 60vh;
+    }
+    .skills-overlay h2{
+        font-size: 4.5rem;
+    }
+}
+@media(min-width: 36em)
+{
+    .figSkills
+    {
+        max-width: 20%;
+        padding: 3.5em 1.5em;
+    }
+}
 
 
     /*********************************************Projects*********************************************/
 
-    #projects h2 {
-        /* background-color: blueviolet; */
+    #projects{
+        /* background: skyblue; */
+        /* padding-bottom: 2rem; */
+        margin-top: 3rem;
+    }
+    .projects-logo{
+        background: url(images/projects-logo.jpeg) no-repeat center;
+        background-size: cover;
+        height: 25vh;
+        width: 100%;
+    }
+    .projects-overlay{
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects-overlay h2{
+        font-size: 2.5rem;
+        color: white;
+    }
+    /* #projects h2 {
+        background-color: blueviolet;
         padding: 0.4em;
         font-size: 1.6em;
-    }
-
+    } */
     .project-container {
         width: min(85%, 989px);
         margin: 0 auto;
         text-align: center;
+        margin-top: 1.5rem;
     }
-
     .project-container h3 {
         padding: 1.2em;
         color: blue;
     }
-
     .project-content {
         border: 1px solid black;
         border-radius: 10px;
@@ -428,9 +571,36 @@ nav ul li a:hover
         margin: 10px 0;
         line-height: 1.34em;
     }
+    .project-content1 {
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: black 0 0 30px;
+        padding: 10px;
+        margin-bottom: 2.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
+    .project-content1 img {
+        max-width: 100%;
+        height: 155px;
+        padding: .5rem;
+    }
+
+    .project-content1 p {
+        text-align: justify;
+        margin: 10px 0;
+        line-height: 1.34em;
+    }
+   
     @media(min-width: 769px) {
-
+        .projects-logo{
+            height: 45vh;
+        }
+        .projects-overlay h2{
+            font-size: 3.5rem;
+        }
         .project-content img {
             height: 300px;
         }
@@ -447,20 +617,47 @@ nav ul li a:hover
             width: 70%;
         }
     }
+    @media(min-width: 889px){
+        .projects-logo{
+            height: 60vh;
+        }
+        .projects-overlay h2{
+            font-size: 4.5rem;
+        }
+    }
+
 
     /********************************************Hobbies*********************************************/
 
     #hobbies
     {
         background-color: #b0e0e2;
+        margin-top: 3rem;
     }
-    #hobbies h2
+    .hobbies-logo{
+        background: url(images/hobbies-logo.jpg) no-repeat center;
+        background-size: cover;
+        height: 25vh;
+        width: 100%;
+    }
+    .hobbies-overlay{
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    .hobbies-overlay h2{
+        font-size: 2.5rem;
+        color: white;
+    }
+    /* #hobbies h2
     {
         background-color:  #458c8f;
         box-shadow: #458c8f 0 0 10px;
         padding: 0 0 5px 0;
         font-size: 1.7em; 
-    }
+    } */
     .hobbies-images
     {
         padding:1em 0;
@@ -483,13 +680,19 @@ nav ul li a:hover
         width: auto;
         height: 180px;
     }
-    .figHobbiesCapt
+    .figHobbies .figHobbiesCapt
     {
         padding-top: 0.7em;
         font-size: 1.1em;
     }
     @media(min-width: 769px)
     {
+        .hobbies-logo{
+            height: 45vh;
+        }
+        .hobbies-overlay h2{
+            font-size: 3.5rem;
+        }
         .hobbies-images .figHobbies img
         {
             height: 200px;
@@ -500,6 +703,14 @@ nav ul li a:hover
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+        }
+    }
+    @media(min-width: 889px){
+        .hobbies-logo{
+            height: 60vh;
+        }
+        .hobbies-overlay h2{
+            font-size: 4.5rem;
         }
     }
 
