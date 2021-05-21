@@ -191,6 +191,9 @@ nav ul li a:hover
 {
     margin: 1em 0 2.5em 0;
 }
+.my-views p{
+    padding-bottom: 3rem;
+}
 .social-media
 {
     list-style: none;
