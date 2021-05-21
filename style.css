@@ -198,7 +198,8 @@ nav ul li a:hover
     justify-content: space-around;
     padding: 15px;
     margin: 0 auto;
-    width: 70%;       
+    width: 70%;  
+    padding-bottom: 3rem;     
 }
 @media(min-width: 769px)
 {
@@ -608,17 +609,22 @@ nav ul li a:hover
         .project-content img {
             height: 300px;
         }
-
+        .project-content1 img {
+            height: 250px;
+        }
         .project-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
         }
-
         .project-content p {
             font-size: 1.1em;
             width: 70%;
+        }
+        .project-content1 p {
+            font-size: 1.1em;
+            width: 80%;
         }
     }
     @media(min-width: 889px){
@@ -627,6 +633,9 @@ nav ul li a:hover
         }
         .projects-overlay h2{
             font-size: 4.5rem;
+        }
+        .project-content1 img {
+            height: 300px;
         }
     }
 
