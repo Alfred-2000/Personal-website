@@ -378,12 +378,12 @@
                     </div>
                 </div>
                 <div class="contact-form" data-aos="fade-up">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="text" placeholder="Last Name"><br>
-                        <input type="Email" placeholder="Email" required><br>
-                        <input type="text" placeholder="Subject of this message"><br>
-                        <textarea name="message" placeholder="Message" rows="8" required></textarea><br>
+                    <form action="mail.php" method="post">
+                        <input type="text" placeholder="Your Name" name="fname" required>
+                        <input type="text" placeholder="Last Name" name="lname"><br>
+                        <input type="Email" placeholder="Email" name="email" required><br>
+                        <input type="text" placeholder="Subject of this message" name="subject"><br>
+                        <textarea name="message" placeholder="Message" rows="8" name="message" required></textarea><br>
                         <button class="submit">Send Message</button>
                     </form>
                 </div>
